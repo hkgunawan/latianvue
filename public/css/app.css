@@ -10904,10 +10904,6 @@ a.text-dark:focus {
   }
 }
 
-.view {
-  margin-top: 1000px !important;
-}
-
 .counters {
   margin-right: 30px;
   font-size: 10px;
@@ -10917,6 +10913,10 @@ a.text-dark:focus {
 .counters strong {
   display: block;
   font-size: 2em;
+}
+
+.counters .view {
+  margin-top: 10px;
 }
 
 .counters .vote,

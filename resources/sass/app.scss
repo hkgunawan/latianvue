@@ -7,9 +7,7 @@
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
 
-.view {
-    margin-top: 1000px !important;
-}
+
 
 .counters {
     margin-right: 30px;
@@ -21,7 +19,9 @@
         font-size: 2em;
     }
 
-
+    .view {
+        margin-top: 10px;
+    }
 
     .vote,
     .answer {
@@ -43,6 +43,4 @@
             color: white;
         }
     }
-
-
 }

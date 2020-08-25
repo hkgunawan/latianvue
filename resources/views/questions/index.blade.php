@@ -13,7 +13,7 @@
                                     <div class="vote">
                                         <strong>{{ $question->votes }}</strong>{{ Str::plural('vote', $question->votes) }}
                                     </div>
-                                    <div class="status answered-accepted">
+                                    <div class="status {{ $question->status }}">
                                         <strong>{{ $question->answer }}</strong>{{ Str::plural('answer', $question->answer) }}
                                     </div>
                                     <div class="view">
