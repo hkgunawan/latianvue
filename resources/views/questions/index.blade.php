@@ -10,13 +10,13 @@
                         @foreach ($questions as $question)
                             <div class="media">
                                 <div class="d-flex flex-column counters">
-                                    <div classs="vote">
+                                    <div class="vote">
                                         <strong>{{ $question->votes }}</strong>{{ Str::plural('vote', $question->votes) }}
                                     </div>
-                                    <div classs="status answered-accepted">
+                                    <div class="status answered-accepted">
                                         <strong>{{ $question->answer }}</strong>{{ Str::plural('answer', $question->answer) }}
                                     </div>
-                                    <div classs="view">
+                                    <div class="view">
                                         {{ $question->views . ' ' . Str::plural('view', $question->views) }}
                                     </div>
                                 </div>
