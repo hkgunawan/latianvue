@@ -14,8 +14,9 @@
                     </div>
                     @include('layouts.errormessages')
                     <div class="card-body">
-                        <form action="{{ route('questions.store') }}" method="post">
-                            @include('questions._form',['button_text'=> 'Ask Question'])
+                        <form action="{{ route('questions.update', $question->id) }}" method="post">
+                            @method('PUT')
+                            @include('questions._form',['button_text'=> 'Update Question'])
                         </form>
                     </div>
 
