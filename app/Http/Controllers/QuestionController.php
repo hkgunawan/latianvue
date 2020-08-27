@@ -41,7 +41,7 @@ class QuestionController extends Controller
     public function store(QuestionPost $request)
     {
         $request->user()->questions()->create($request->only('title', 'body'));
-        return redirect()->route('questions.index')->with('status', "Your Question has been submitted");
+        return redirect('questions')->with('status', "Your Question has been submitted");
     }
 
     /**
@@ -76,7 +76,7 @@ class QuestionController extends Controller
     public function update(QuestionPost $request, Question $question)
     {
         $question->update($request->all());
-        return redirect()->route('questions.index')->with('status', "Your Question has been updated");
+        return redirect('questions')->with('status', "Your Question has been updated");
     }
 
     /**
@@ -87,6 +87,7 @@ class QuestionController extends Controller
      */
     public function destroy(Question $question)
     {
-        //
+        $question->delete();
+        return redirect()->back()->with('status', "Your Question has been deleted");
     }
 }
