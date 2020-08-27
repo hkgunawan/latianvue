@@ -12,7 +12,7 @@
                             </div>
                         </div>
                     </div>
-
+                    @include('layouts.flashmessage')
                     <div class="card-body">
                         @foreach ($questions as $question)
                             <div class="media">

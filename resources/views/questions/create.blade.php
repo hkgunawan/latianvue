@@ -12,17 +12,19 @@
                             </div>
                         </div>
                     </div>
-
+                    @include('layouts.errormessages')
                     <div class="card-body">
                         <form action="{{ route('questions.store') }}" method="post">
+                            @csrf
                             <div class="form-group">
                                 <label for="question-title">Question Title</label>
-                                <input type="text" name="title" id="question-title" class="form-control">
+                                <input type="text" name="title" id="question-title" value="{{ old('title') }}"
+                                    class="form-control">
                             </div>
                             <div class="form-group">
                                 <label for="question-body">Explain your question</label>
                                 <textarea name="body" id="question-body" cols="10" rows="10"
-                                    class="form-control"></textarea>
+                                    class="form-control">{{ old('body') }}</textarea>
                             </div>
                             <div class="form-group">
                                 <button type="submit" class="btn btn-outline-primary btn-lg"> Ask this question</button>
